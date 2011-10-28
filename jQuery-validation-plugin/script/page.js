@@ -9,8 +9,10 @@ function initDatepicker(i) {
         changeMonth: true,
         changeYear: true,
         dateFormat: 'dd.mm.yy',
-        onSelect: function(text, instance) {
-            log("onselect");
+        onClose: function() {
+            // force the validation, and return input focus, to field
+            $(this).valid();
+            this.focus();
         }
     });
 }
