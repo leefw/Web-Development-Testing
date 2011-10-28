@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../libs/jquery-ui/1.8.16/css/ui-lightness/jquery-ui-1.8.16.custom.css" />
+        <link rel="stylesheet" type="text/css" href="css/form.css" />
+        <link rel="stylesheet" type="text/css" href="css/validation.css" />
+    </head>
+    <body>
+        <form id="user-data" action="">
+            <p>
+                <label for="firstname">First name</label>
+                <input name="firstname" id="firstname" />
+            </p>
+            <p>
+                <label for="lastname">Last name</label>
+                <input name="lastname" id="lastname" />
+            </p>
+            <p>
+                <label for="birthday">Birthday</label>
+                <input name="birthday" id="birthday" />
+            </p>            
+            <p>
+                <label for="email">E-mail</label>
+                <input name="email" id="email" />
+            </p>
+            <p>
+                <label for="gender">Gender</label>
+                <select name="gender" id="gender">
+                    <option value="Male" selected="selected">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </p>
+            
+            <input id="submit" type="submit" name="check" />
+        </form>
+        
+        <div id="validation-messages">
+            <!-- validation messages area -->
+        </div>
+        
+        <script type="text/javascript" src="../libs/jquery/1.6.4/jquery.js"></script>
+        <script type="text/javascript" src="../libs/jquery-ui/1.8.16/development-bundle/ui/jquery-ui-1.8.16.custom.js"></script>
+        <script type="text/javascript" src="../libs/jquery-validate/1.8.1/jquery.validate.js"></script>
+        
+        <script type="text/javascript" src="script/page.js"></script>
+        <script type="text/javascript" src="script/util.js"></script>
+    </body>
+</html>
