@@ -8,5 +8,7 @@ input.error {
 }
 
 div#validation-messages {
-    
+    margin: 20px 0;
+    width: 50%;
+    border: 1px solid red;
 }

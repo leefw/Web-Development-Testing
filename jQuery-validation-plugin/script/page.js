@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
     initDatepicker("#birthday");
     
     initValidation("#user-data");
@@ -59,7 +59,7 @@ function optionsForValidation() {
             log("Validation successful");
         },
         wrapper: "li",
-        errorLabelContainer: "#validation-messages"
+        errorLabelContainer: "#validation-messages ul"
     };
 
     return options;
