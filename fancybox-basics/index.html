@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>Displaying a form dialog using FancyBox</title>
+	
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script>
+		!window.jQuery && document.write('<script src="lib/jquery/jquery-1.4.3.min.js"><\/script>');
+	</script>
+    
+	<script type="text/javascript" src="lib/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+	<script type="text/javascript" src="lib/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<link rel="stylesheet" type="text/css" href="lib/fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+    
+ 	<link rel="stylesheet" href="style.css" />
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#login-link").fancybox({
+				'titlePosition'		: 'inside',
+				'transitionIn'		: 'none',
+				'transitionOut'		: 'none'
+			});
+		});
+	</script>
+</head>
+
+<body>
+<div id="content">
+	<h1>Login using Fancybox</h1>
+    
+	<a id="login-link" href="#login-form" title="Box title here">Login here</a>
+
+	<div style="display: none;">
+		<div id="login-form" style="width:486px; height:312px; overflow:auto;">
+            <form id="login" action="">
+                <label>Label 1</label><input type="text"></input>
+            </form>
+		</div>
+	</div>
+</div>
+</body>
+
+</html>
