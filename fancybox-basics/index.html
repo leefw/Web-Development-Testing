@@ -15,9 +15,9 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$("#login-link").fancybox({
-				'titlePosition'		: 'inside',
-				'transitionIn'		: 'none',
-				'transitionOut'		: 'none'
+                openEffect: 'elastic',
+                helpers: {title: { type: 'outside' }},
+                closeBtn: false
 			});
 		});
 	</script>
@@ -27,7 +27,7 @@
 <div id="content">
 	<h1>Login using Fancybox</h1>
     
-	<a id="login-link" href="#login-form" title="Box title here">Login here</a>
+	<a id="login-link" href="#login-form" title="Login">Login here</a>
 
 	<div style="display: none;">
 		<div id="login-form" style="width:486px; height:312px; overflow:auto;">
