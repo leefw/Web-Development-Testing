@@ -5,13 +5,62 @@
 <head>
 	<title>Displaying a form dialog using FancyBox</title>
 	
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
+       
+ 	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+<div id="content">
+	<h1>Login using Fancybox</h1>
+    
+	<a id="login-link" href="#display-login-register-form" title="Login">Login here or register</a>
+
+	<div style="display: none;">
+		<div id="display-login-register-form" style="width:486px; height:312px; overflow:auto;">
+            <div id="login-area">
+                <h2>Please log in</h2>
+                <form id="login-form">
+                    <label for="username">Your username</label>
+                    <br />
+                    <input id="username" type="text" class="" tabindex="1"></input>
+                    <br />
+                    <label for="password">Your password</label>
+                    <br />
+                    <input id="password" type="password" class="" tabindex="2"></input>
+                    <br />
+                    <input id="remember-me" type="checkbox" class="" tabindex="3" />
+                    <label for="remember-me">Keep me logged in</label>
+                    <br />
+                    <a href="#">Forgotten username or password?</a>
+                    <br />
+                    <input id="login" type="submit" value="Log in" tabindex="4" />
+                </form>
+            </div>
+            <div id="register-area">
+                <h2>New user?</h2>
+                <form id="register-form">
+                    <label for="new-username">Choose a username</label>
+                    <br />
+                    <input id="new-username" type="text" class="" tabindex="5"></input>
+                    <br />
+                    <label for="new-mail">Your e-mail</label>
+                    <br />
+                    <input id="new-mail" type="text" class="" tabindex="6"></input>
+                    <br />
+                    <a href="#">What are the benefits for registering?</a>
+                    <br />
+                    <input id="register" type="submit" value="Complete registration" tabindex="7" />
+                </form>
+            </div>
+		</div>
+	</div>
+</div>
+
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 
 	<script type="text/javascript" src="lib/jquery.fancybox.js"></script>
-	
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
-        
- 	<link rel="stylesheet" href="style.css" />
+
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$("#login-link").fancybox({
@@ -21,25 +70,6 @@
 			});
 		});
 	</script>
-</head>
-
-<body>
-<div id="content">
-	<h1>Login using Fancybox</h1>
-    
-	<a id="login-link" href="#login-form" title="Login">Login here</a>
-
-	<div style="display: none;">
-		<div id="login-form" style="width:486px; height:312px; overflow:auto;">
-            <form id="login" action="">
-                <label>Username</label><input type="text"></input>
-                <br />
-                <label>Password</label><input type="password"></input>
-                <br />
-            </form>
-		</div>
-	</div>
-</div>
 </body>
 
 </html>

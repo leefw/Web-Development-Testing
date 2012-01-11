@@ -1,0 +1,7 @@
+div#display-login-register-form  div#login-area{
+    float: left;
+}
+
+div#display-login-register-form  div#register-area{
+    float: right;
+}
