@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Displaying form dialogs using FancyBox</title>
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
+
+ 	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<a id="dialog-caller" class="fancybox fancybox.iframe" href="javascript:">Call dialogs</a>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+
+<script type="text/javascript" src="lib/jquery.fancybox.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+        $("#dialog-caller").click(function() {
+            $.fancybox.open([{
+                href : 'dialog-1.html',
+                type : 'iframe'
+            }, {
+                href : 'dialog-2.html',
+                type : 'iframe'
+            }], {
+                loop: false,
+                openEffect: 'elastic',
+                nextEffect: 'fade'
+            });
+        });
+	});
+</script>
+
+</body>
+
+</html>
