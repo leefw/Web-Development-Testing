@@ -11,7 +11,17 @@
 
 <body>
 
-<a id="dialog-caller" class="fancybox fancybox.iframe" href="javascript:">Call dialogs</a>
+<div style="display: none;">
+    <div class="something">
+        some content here 1
+    </div>
+    <div class="something">
+        some content here 2
+    </div>
+    <div class="something">
+        some content here 3
+    </div>    
+</div>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 
@@ -19,19 +29,7 @@
 
 <script type="text/javascript">
 	$(document).ready(function() {
-        $("#dialog-caller").click(function() {
-            $.fancybox.open([{
-                href : 'dialog-1.html',
-                type : 'iframe'
-            }, {
-                href : 'dialog-2.html',
-                type : 'iframe'
-            }], {
-                loop: false,
-                openEffect: 'elastic',
-                nextEffect: 'fade'
-            });
-        });
+        $("div.something").fancybox();
 	});
 </script>
 
